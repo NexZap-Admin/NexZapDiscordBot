@@ -20,7 +20,13 @@ class Program
         _client.Log += Log;
         _client.UserJoined += UserJoined;
 
-        string token = "MTUxMTYyODU0ODYyMjc3ODU5OQ.Gd_XIk.pBMsHTXT05un4sX3jtxzfYQANp5eLdtfohXSKM";
+        string? token = Environment.GetEnvironmentVariable("DISCORD_TOKEN");
+
+        if (string.IsNullOrEmpty(token))
+        {
+            Console.WriteLine("DISCORD_TOKEN not found!");
+            return;
+        }
 
         await _client.LoginAsync(TokenType.Bot, token);
         await _client.StartAsync();
