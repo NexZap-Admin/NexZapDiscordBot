@@ -15,9 +15,7 @@ client.on("guildMemberAdd", async (member) => {
 
   if (!channel) return;
 
-  channel.send(
-    `🚀 Chào mừng ${member} đến với gia đình NexZap. Chúc bạn có những trải nghiệm tuyệt vời cùng cộng đồng!`,
-  );
+  channel.send(`🚀 Chào mừng ${member} đến với gia đình NexZap!`);
 });
 
 client.login(process.env.DISCORD_TOKEN);
