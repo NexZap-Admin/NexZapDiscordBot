@@ -20,7 +20,7 @@ class Program
         _client.Log += Log;
         _client.UserJoined += UserJoined;
 
-        string token = "BOT_TOKEN_CUA_BAN";
+        string token = "MTUxMTYyODU0ODYyMjc3ODU5OQ.Gd_XIk.pBMsHTXT05un4sX3jtxzfYQANp5eLdtfohXSKM";
 
         await _client.LoginAsync(TokenType.Bot, token);
         await _client.StartAsync();
